@@ -11,7 +11,7 @@ const Navigation = () => {
   const matches = useMediaQuery("(min-width: 1280px)");
 
   return (
-    <nav className="relative mx-8 flex justify-between items-center pt-6 pb-6 font-medium md:mx-16 lg:mx-32">
+    <nav className="relative mx-8 flex justify-between items-center pt-12 font-medium md:mx-16 lg:mx-32">
       <img src="/avatar.png" alt="avatar" className="max-h-10 z-50" />
       {matches && (
         <div className="flex gap-12">
