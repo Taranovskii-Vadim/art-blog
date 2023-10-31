@@ -11,12 +11,12 @@ const Navigation = () => {
   const matches = useMediaQuery("(min-width: 1280px)");
 
   return (
-    <nav className="relative mx-8 mb-24 flex justify-between items-center pt-12 pb-6 font-medium md:mx-16 lg:mx-32">
+    <nav className="relative mx-8 flex justify-between items-center pt-6 pb-6 font-medium md:mx-16 lg:mx-32">
       <img src="/avatar.png" alt="avatar" className="max-h-10 z-50" />
       {matches && (
         <div className="flex gap-12">
           <a href="/">Home</a>
-          <a href="/services">Services</a>
+          <a href="/gallery">Gallary</a>
           <a href="/contact">Contact</a>
         </div>
       )}
@@ -54,8 +54,8 @@ const Navigation = () => {
             <motion.a variants={itemMotion} href="/">
               Home
             </motion.a>
-            <motion.a variants={itemMotion} href="/services">
-              Services
+            <motion.a variants={itemMotion} href="/gallery">
+              Gallary
             </motion.a>
             <motion.a variants={itemMotion} href="/contact">
               Contact
