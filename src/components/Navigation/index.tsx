@@ -44,7 +44,7 @@ const Navigation = () => {
         </div>
       )}
       {toggled && !matches && (
-        <div className="fixed bg-white bottom-0 left-0 w-full h-screen flex items-center justify-center">
+        <div className="fixed bg-white bottom-0 left-0 w-full h-screen flex items-center justify-center z-40">
           <motion.div
             initial="hidden"
             animate="visible"
