@@ -1,0 +1,23 @@
+---
+import MainLayout from "../../layouts/main.astro";
+---
+
+<MainLayout title="Gallery">
+  <div class="mx-12">
+    <div
+      class="grid mt-12 grid-cols-1 gap-24 md:grid-cols-2 xl:mx-24 xl:grid-cols-3"
+    >
+      <div class="group relative cursor-pointer">
+        <img
+          src="/art.jpg"
+          alt="painting"
+          class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+        />
+        <div
+          class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
