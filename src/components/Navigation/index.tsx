@@ -17,7 +17,6 @@ const Navigation = () => {
         <div className="flex gap-12">
           <a href="/">Home</a>
           <a href="/gallery">Gallary</a>
-          <a href="/contact">Contact</a>
         </div>
       )}
       {!matches && (
@@ -56,9 +55,6 @@ const Navigation = () => {
             </motion.a>
             <motion.a variants={itemMotion} href="/gallery">
               Gallary
-            </motion.a>
-            <motion.a variants={itemMotion} href="/contact">
-              Contact
             </motion.a>
           </motion.div>
         </div>
