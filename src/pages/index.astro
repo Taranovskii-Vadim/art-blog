@@ -4,45 +4,25 @@ import MainLayout from "../layouts/main.astro";
 
 <MainLayout title="Intro">
   <div
-    class="relative mx-12 pt-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36"
+    class="relative pt-12 flex flex-col items-center justify-center xl:flex-row xl:gap-36"
   >
-    <div class="w-full xl:w-1/2">
-      <h1 class="text-xl mb-3">
-        This is title of my <span class="font-bold">blog</span>
-      </h1>
-      <div class="relative">
-        <svg class="absolute h-full w-full overflow-visible">
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style={{ stopColor: "#DC3A2B", stopOpacity: 1 }}
-              ></stop>
-              <stop
-                offset="100%"
-                style={{ stopColor: "#E18510", stopOpacity: 1 }}></stop>
-            </linearGradient>
-          </defs>
-          <path
-            id="border-path"
-            fill="none"
-            stroke="url(#gradient)"
-            stroke-width="4"></path>
-        </svg>
-        <p id="anim-p" class="p-6 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          <br />
-          <br />
-           Repellendus explicabo voluptatibus consequuntur blanditiis dolorum
-          ducimus, voluptas reiciendis animi tenetur eligendi doloremque vitae
-          necessitatibus molestiae cum distinctio asperiores?
-          <br />
-          <br />
-           Quas, reiciendis quae.
-        </p>
-      </div>
+    <div class="w-full xl:w-3/5">
+      <h1 class="text-xl mb-4 font-bold">Welcome to my art blog!</h1>
+      <h2 class="mb-4 text-lg">
+        Here i share the most current information from the world of art.
+      </h2>
+      <p>
+        Repellendus explicabo voluptatibus consequuntur blanditiis dolorum
+        ducimus, voluptas reiciendis animi tenetur eligendi doloremque vitae
+        necessitatibus molestiae cum distinctio asperiores?
+        <br />
+        <br />
+         Quas, reiciendis quae.
+      </p>
       <div class="flex justify-center pt-12 text-center mb-12 xl:gap-16">
         <div class="w-32">
-          <h2>Art posts</h2>
-          <p id="art-counter" class="text-xl font-bold">85</p>
+          <h2>Articles</h2>
+          <p id="articles-counter" class="text-xl font-bold">85</p>
         </div>
         <div class="w-32">
           <h2>Youtube</h2>
@@ -63,37 +43,7 @@ import MainLayout from "../layouts/main.astro";
   </div>
 </MainLayout>
 
-<style>
-  #border-path {
-    animation: draw 1s forwards 1s ease-out;
-  }
-
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-</style>
-
 <script>
-  function updatePath() {
-    const textMain = document.querySelector("#anim-p") as HTMLElement;
-    const path = document.querySelector("#border-path") as SVGPathElement;
-
-    if (textMain && path) {
-      path.setAttribute(
-        "d",
-        `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${
-          textMain.offsetHeight / 2
-        }`
-      );
-    }
-
-    const pathLength = path.getTotalLength();
-    path.style.strokeDasharray = pathLength.toString();
-    path.style.strokeDashoffset = pathLength.toString();
-  }
-
   function incrementCounter(
     selector: string,
     current: number,
@@ -115,10 +65,7 @@ import MainLayout from "../layouts/main.astro";
     }
   }
 
-  incrementCounter("art-counter", 0, 85, 2000);
+  incrementCounter("articles-counter", 0, 85, 2000);
   incrementCounter("youtube-counter", 0, 320, 1000, "k");
   incrementCounter("reviews-counter", 0, 250, 1000);
-
-  window.addEventListener("DOMContentLoaded", updatePath);
-  window.addEventListener("resize", updatePath);
 </script>

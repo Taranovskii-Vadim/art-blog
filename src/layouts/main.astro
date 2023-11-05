@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 import Navigation from "../components/Navigation";
 
 const { title } = Astro.props;
@@ -9,8 +11,9 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art-blog | {title}</title>
+    <ViewTransitions />
   </head>
-  <body class="mb-12">
+  <body class="mb-12 mx-8 md:mx-16 lg:mx-24">
     <header>
       <Navigation client:load />
     </header>
