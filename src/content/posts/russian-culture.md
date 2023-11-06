@@ -1,7 +1,7 @@
 ---
 author: vadim
 date: 08/10/1998
-image: /art.jpg
+image: ./images/art2.jpg
 title: Deep dive into russian culture
 ---
 
