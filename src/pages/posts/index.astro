@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+
+import MainLayout from "../../layouts/main.astro";
+
+import Post from "../../components/Post/index.astro";
+
+const posts = await getCollection("posts");
+---
+
+<MainLayout title="News">
+  <div class="grid mt-12 grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {posts.map((item: any) => <Post post={item} />)}
+  </div>
+</MainLayout>
