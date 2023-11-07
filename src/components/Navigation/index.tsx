@@ -12,7 +12,9 @@ const Navigation = () => {
 
   return (
     <nav className="relative flex justify-between items-center pt-12 font-medium">
-      <img src="/avatar.png" alt="avatar" className="max-h-10 z-50" />
+      <a href="/">
+        <img src="/logo.png" alt="logo" className="max-h-10 z-50" />
+      </a>
       {matches && (
         <div className="flex gap-12">
           <a href="/">Home</a>
