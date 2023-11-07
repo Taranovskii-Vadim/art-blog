@@ -1,8 +1,8 @@
 ---
 author: vadim
 date: 08/10/1998
-image: ./images/art2.jpg
-title: Deep dive into russian culture
+image: ./images/art.jpg
+title: Deep dive into japanese nature
 ---
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, consectetur, pariatur
