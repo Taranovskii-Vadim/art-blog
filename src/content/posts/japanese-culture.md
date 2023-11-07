@@ -5,8 +5,6 @@ image: ./images/art.jpg
 title: Deep dive into japanese culture
 ---
 
-import Callout from "../../components/Callout/index.astro";
-
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, consectetur, pariatur
 rerum facere amet totam possimus officia ipsum laborum laudantium laboriosam cum
 error modi sapiente similique fugit? Labore, commodi. Corrupti.
@@ -28,5 +26,3 @@ error modi sapiente similique fugit? Labore, commodi. Corrupti.
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, consectetur, pariatur
 rerum facere amet totam possimus officia ipsum laborum laudantium laboriosam cum
 error modi sapiente similique fugit? Labore, commodi. Corrupti.
-
-<Callout text="Read more here" link="#" />
