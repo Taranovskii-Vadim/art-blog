@@ -1,8 +1,8 @@
 ---
 author: vadim
 date: 08/10/1998
-image: ./images/art3.jpg
-title: Deep dive into norway nature
+image: ./images/norway.jpg
+title: Norway nature
 ---
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, consectetur, pariatur

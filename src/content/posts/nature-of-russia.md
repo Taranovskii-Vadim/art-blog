@@ -1,8 +1,8 @@
 ---
 author: vadim
 date: 08/10/1998
-image: ./images/art2.jpg
-title: Deep dive into russian nature
+image: ./images/russia.jpg
+title: Russian nature
 ---
 
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, consectetur, pariatur
