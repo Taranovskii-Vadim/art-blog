@@ -23,12 +23,12 @@ const { Content } = await post.render();
 <MainLayout title={post.data.title}>
   <div class="mt-12">
     <Image
-      src={post.data.image}
-      alt={post.data.title}
+      format="webp"
       width={1024}
       height={1024 / 2}
-      format="webp"
-      class="rounded-lg shadow-xl mb-28 object-cover"
+      src={post.data.image}
+      alt={post.data.title}
+      class="rounded-lg shadow-xl mb-12 object-cover w-full"
     />
     <div class="prose prose-2xl overflow-visible relative mb-20">
       <Content />
