@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/main.astro";
+
+import Counter from "../components/Counter";
 ---
 
 <MainLayout title="Intro">
@@ -20,47 +22,11 @@ import MainLayout from "../layouts/main.astro";
          Quas, reiciendis quae.
       </p>
       <div class="flex justify-center pt-12 text-center mb-12 xl:gap-16">
-        <div class="w-32">
-          <h2>Articles</h2>
-          <p id="articles-counter" class="text-xl font-bold">85</p>
-        </div>
-        <div class="w-32">
-          <h2>Youtube</h2>
-          <p id="youtube-counter" class="text-xl font-bold">1.2m</p>
-        </div>
-        <div class="w-32">
-          <h2>Reviews</h2>
-          <p id="reviews-counter" class="text-xl font-bold">50</p>
-        </div>
+        <Counter title="Articles" target={85} duration={2000} client:load />
+        <Counter title="Youtube" target={320} postfix="k" client:load />
+        <Counter title="Reviews" target={250} duration={1500} client:load />
       </div>
     </div>
     <img class="h-full w-1/4" src="/portrait.jpg" alt="portrait" />
   </div>
 </MainLayout>
-
-<script>
-  function incrementCounter(
-    selector: string,
-    current: number,
-    target: number,
-    duration: number,
-    letter = ""
-  ) {
-    const counter = document.getElementById(selector);
-    const stepTime = Math.abs(Math.floor(duration / target));
-
-    if (current < target && counter) {
-      current++;
-      counter.innerText = current.toString() + letter;
-
-      setTimeout(
-        () => incrementCounter(selector, current, target, duration, letter),
-        stepTime
-      );
-    }
-  }
-
-  incrementCounter("articles-counter", 0, 85, 2000);
-  incrementCounter("youtube-counter", 0, 320, 1000, "k");
-  incrementCounter("reviews-counter", 0, 250, 1000);
-</script>
